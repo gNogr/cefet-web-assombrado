@@ -62,7 +62,9 @@ a:active {
   margin-bottom: 0;
 }
 
-
+#menu-de-navegacao ul > li{
+  display: inline;
+}
 
 /* --- Conteúdo principal da página --- */
 #conteudo-principal {
@@ -92,7 +94,9 @@ a:active {
 }
 
 #posts-principais .post .titulo {
+	position: relative;
   text-shadow: 1px 1px black;
+  
 }
 
 #posts-principais .post img {
@@ -133,7 +137,17 @@ a:active {
   display: inline-block;
 }
 
-
+.novidade::before {
+  content: "Novidade!";
+  display: inline-block;
+  background-color: green;
+  color: white;
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 3px;
+  display: inline-block;
+  margin-right: 1em;
+}
 
 
 /* --- Principal >> Nuvem de tags --- */
@@ -146,12 +160,20 @@ a:active {
   background-repeat: no-repeat;
   background-size: 300px;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
   text-align: center;
 }
 
 #tags h1 {
   margin-bottom: 1em;
   text-shadow: 2px 2px #000;
+}
+
+#tags span:active {
+  position:relative;
+  bottom: 2px;
+  right: 2px;
+  
 }
 
 .tag-1,
